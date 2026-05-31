@@ -1,5 +1,5 @@
 /** Update siteUrl if you rename the Vercel project or add a custom domain. */
-export const siteUrl = "https://port-folio-nine-azure.vercel.app";
+export const siteUrl = "https://abd-tech.vercel.app";
 
 export const seo = {
   title: "Abdulrahman Iqbal | Python Developer & Backend Engineer",

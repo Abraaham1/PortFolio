@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://port-folio-nine-azure.vercel.app/sitemap.xml
+Sitemap: https://abd-tech.vercel.app/sitemap.xml
