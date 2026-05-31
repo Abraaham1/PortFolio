@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://port-folio-nine-azure.vercel.app/sitemap.xml

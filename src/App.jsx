@@ -1,3 +1,4 @@
+import Seo from "./components/Seo";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -11,6 +12,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
+      <Seo />
       <div className="bg-mesh" aria-hidden="true" />
       <div className="bg-grid" aria-hidden="true" />
       <Navbar />

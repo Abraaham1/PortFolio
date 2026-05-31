@@ -36,7 +36,7 @@ export default function Hero() {
           custom={1}
         >
           Hi, I&apos;m{" "}
-          <span className="hero__name">{personal.name}</span>
+          <span className="hero__name">{personal.fullName}</span>
         </motion.h1>
 
         <motion.p
