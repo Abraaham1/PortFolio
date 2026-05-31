@@ -65,10 +65,16 @@
   word-break: break-all;
 }
 
-.contact__cta {
+.contact__actions {
   grid-column: 1 / -1;
-  justify-self: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 8px;
+}
+
+.contact__cta {
+  margin-top: 0;
 }
 
 @media (max-width: 768px) {

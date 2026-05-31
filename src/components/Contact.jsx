@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Download, Mail, Phone, MapPin } from "lucide-react";
 import { IconGitHub, IconLinkedIn } from "./BrandIcons";
 import { personal } from "../data/portfolio";
 import SectionReveal from "./SectionReveal";
@@ -73,10 +73,20 @@ export default function Contact() {
             </a>
           </div>
 
-          <a href={`mailto:${personal.email}`} className="btn btn-primary contact__cta">
-            <Mail size={18} />
-            Send an Email
-          </a>
+          <div className="contact__actions">
+            <a href={`mailto:${personal.email}`} className="btn btn-primary contact__cta">
+              <Mail size={18} />
+              Send an Email
+            </a>
+            <a
+              href={personal.cvUrl}
+              download={personal.cvFileName}
+              className="btn btn-outline contact__cta"
+            >
+              <Download size={18} />
+              Download CV
+            </a>
+          </div>
         </div>
       </SectionReveal>
     </section>

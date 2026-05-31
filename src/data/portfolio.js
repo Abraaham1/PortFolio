@@ -13,6 +13,8 @@ export const personal = {
   githubUsername: "Abraaham1",
   avatar: "https://avatars.githubusercontent.com/u/203318462?v=4",
   cgpa: "3.62",
+  cvUrl: "/Abdulrahman_Iqbal_CV.pdf",
+  cvFileName: "Abdulrahman_Iqbal_CV.pdf",
 };
 
 export const profile = `Computer Science student and Python developer with hands-on experience building automation pipelines, backend systems, and database-centric solutions. Proven track record delivering ERP integrations and workflow automation in software house environments. Passionate about writing clean, production-ready code that solves real business problems.`;

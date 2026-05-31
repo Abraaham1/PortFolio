@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, MapPin } from "lucide-react";
+import { ArrowDown, Download, Mail, MapPin } from "lucide-react";
 import { IconGitHub, IconLinkedIn } from "./BrandIcons";
 import { personal } from "../data/portfolio";
 import "./Hero.css";
@@ -87,6 +87,14 @@ export default function Hero() {
         >
           <a href="#projects" className="btn btn-primary">
             View Projects
+          </a>
+          <a
+            href={personal.cvUrl}
+            download={personal.cvFileName}
+            className="btn btn-outline"
+          >
+            <Download size={18} />
+            Download CV
           </a>
           <a href="#contact" className="btn btn-outline">
             Get in Touch
