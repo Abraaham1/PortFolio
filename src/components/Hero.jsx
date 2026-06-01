@@ -19,12 +19,23 @@ export default function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero__content">
+        <motion.div
+          className="hero__badge"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0}
+        >
+          <span className="hero__status" />
+          Available for opportunities
+        </motion.div>
+
         <motion.h1
           className="hero__title"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={0}
+          custom={1}
         >
           Hi, I&apos;m{" "}
           <motion.span
@@ -66,7 +77,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={1}
+          custom={2}
         >
           {personal.roles.map((role, i) => (
             <span key={role}>
@@ -81,7 +92,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={2}
+          custom={3}
         >
           {personal.tagline}
         </motion.p>
@@ -91,7 +102,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={3}
+          custom={4}
         >
           <span>
             <MapPin size={16} />
@@ -105,7 +116,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={4}
+          custom={5}
         >
           <a href="#projects" className="btn btn-primary">
             View Projects
@@ -128,7 +139,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={5}
+          custom={6}
         >
           <a
             href={personal.github}
