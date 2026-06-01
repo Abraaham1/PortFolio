@@ -14,7 +14,7 @@ const fadeUp = {
 };
 
 export default function Hero() {
-  const nameChars = personal.fullName.split("");
+  const [firstName = personal.name, lastName = "Iqbal"] = personal.fullName.split(" ");
 
   return (
     <section className="hero" id="home">
@@ -26,7 +26,6 @@ export default function Hero() {
           animate="visible"
           custom={0}
         >
-          <span className="hero__status" />
           Available for opportunities
         </motion.div>
 
@@ -37,39 +36,9 @@ export default function Hero() {
           animate="visible"
           custom={1}
         >
-          Hi, I&apos;m{" "}
-          <motion.span
-            className="hero__name"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {},
-              visible: {
-                transition: {
-                  delayChildren: 0.2,
-                  staggerChildren: 0.035,
-                },
-              },
-            }}
-          >
-            {nameChars.map((char, i) => (
-              <motion.span
-                key={`${char}-${i}`}
-                className="hero__name-char"
-                variants={{
-                  hidden: { y: 30, opacity: 0, rotate: 3 },
-                  visible: {
-                    y: 0,
-                    opacity: 1,
-                    rotate: 0,
-                    transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
-                  },
-                }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            ))}
-          </motion.span>
+          Hi, I&apos;m <span className="hero__name">{firstName}</span>
+          <br />
+          <span className="hero__name hero__name--block">{lastName}</span>
         </motion.h1>
 
         <motion.p
