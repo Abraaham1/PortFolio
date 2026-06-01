@@ -26,7 +26,43 @@ export default function Hero() {
           animate="visible"
           custom={0}
         >
-          Available for opportunities
+          <svg
+            className="hero__badge-outline"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient
+                id="heroBadgeStroke"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+              >
+                <stop offset="0%" stopColor="#22d3ee" />
+                <stop offset="100%" stopColor="#a78bfa" />
+              </linearGradient>
+            </defs>
+            <rect
+              className="hero__badge-outline-track"
+              x="1"
+              y="1"
+              width="100%"
+              height="100%"
+              rx="17"
+              ry="17"
+            />
+            <rect
+              className="hero__badge-outline-path"
+              x="1"
+              y="1"
+              width="100%"
+              height="100%"
+              rx="17"
+              ry="17"
+              pathLength="100"
+            />
+          </svg>
+          <span className="hero__badge-label">Available for opportunities</span>
         </motion.div>
 
         <motion.h1

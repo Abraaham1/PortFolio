@@ -16,64 +16,67 @@
 
 .hero__badge {
   position: relative;
-  isolation: isolate;
   display: inline-flex;
   align-items: center;
   padding: 8px 16px;
+  height: 36px;
+  box-sizing: border-box;
   background: rgba(8, 16, 25, 0.95);
-  border: 1px solid rgba(34, 211, 238, 0.18);
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--accent);
   margin-bottom: 28px;
-  overflow: hidden;
+  overflow: visible;
 }
 
-.hero__badge::before {
-  content: "";
+.hero__badge-label {
+  position: relative;
+  z-index: 1;
+  color: var(--accent);
+}
+
+.hero__badge-outline {
   position: absolute;
-  inset: -1.5px;
-  border-radius: inherit;
-  padding: 1.4px;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg 300deg,
-    rgba(34, 211, 238, 0.95) 326deg,
-    rgba(167, 139, 250, 0.95) 346deg,
-    rgba(34, 211, 238, 0.95) 360deg
-  );
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  animation: badgeBorderSpin 2.8s linear infinite;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
   pointer-events: none;
-  z-index: 0;
 }
 
-.hero__badge::after {
-  content: "";
-  position: absolute;
-  inset: -8px;
-  border-radius: inherit;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg 305deg,
-    rgba(34, 211, 238, 0.35) 330deg,
-    rgba(167, 139, 250, 0.35) 350deg,
-    rgba(34, 211, 238, 0.35) 360deg
-  );
-  filter: blur(10px);
-  animation: badgeBorderSpin 2.8s linear infinite;
-  pointer-events: none;
-  z-index: -1;
+.hero__badge-outline-track {
+  fill: none;
+  stroke: rgba(34, 211, 238, 0.2);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
 }
 
-@keyframes badgeBorderSpin {
+.hero__badge-outline-path {
+  fill: none;
+  stroke: url(#heroBadgeStroke);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  stroke-dasharray: 16 84;
+  stroke-dashoffset: 0;
+  filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.55));
+  animation: heroOutlineTrace 2.6s linear infinite;
+}
+
+@keyframes heroOutlineTrace {
   to {
-    transform: rotate(360deg);
+    stroke-dashoffset: -100;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__badge-outline-path {
+    animation: none;
+    stroke-dasharray: none;
   }
 }
 
