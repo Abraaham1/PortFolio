@@ -14,29 +14,51 @@ const fadeUp = {
 };
 
 export default function Hero() {
+  const nameChars = personal.fullName.split("");
+
   return (
     <section className="hero" id="home">
       <div className="hero__content">
-        <motion.div
-          className="hero__badge"
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={0}
-        >
-          <span className="hero__status" />
-          Available for opportunities
-        </motion.div>
-
         <motion.h1
           className="hero__title"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={1}
+          custom={0}
         >
           Hi, I&apos;m{" "}
-          <span className="hero__name">{personal.fullName}</span>
+          <motion.span
+            className="hero__name"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  delayChildren: 0.2,
+                  staggerChildren: 0.035,
+                },
+              },
+            }}
+          >
+            {nameChars.map((char, i) => (
+              <motion.span
+                key={`${char}-${i}`}
+                className="hero__name-char"
+                variants={{
+                  hidden: { y: 30, opacity: 0, rotate: 3 },
+                  visible: {
+                    y: 0,
+                    opacity: 1,
+                    rotate: 0,
+                    transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
+                  },
+                }}
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </motion.span>
         </motion.h1>
 
         <motion.p
@@ -44,7 +66,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={2}
+          custom={1}
         >
           {personal.roles.map((role, i) => (
             <span key={role}>
@@ -59,7 +81,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={3}
+          custom={2}
         >
           {personal.tagline}
         </motion.p>
@@ -69,7 +91,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={4}
+          custom={3}
         >
           <span>
             <MapPin size={16} />
@@ -83,7 +105,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={5}
+          custom={4}
         >
           <a href="#projects" className="btn btn-primary">
             View Projects
@@ -106,7 +128,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={6}
+          custom={5}
         >
           <a
             href={personal.github}

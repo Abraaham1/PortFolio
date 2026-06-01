@@ -14,28 +14,6 @@
   max-width: 560px;
 }
 
-.hero__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 16px;
-  background: var(--accent-dim);
-  border: 1px solid rgba(34, 211, 238, 0.2);
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--accent);
-  margin-bottom: 28px;
-}
-
-.hero__status {
-  width: 8px;
-  height: 8px;
-  background: #34d399;
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.2);
-}
-
 .hero__title {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 6vw, 4rem);
@@ -56,7 +34,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradientShift 7s ease-in-out infinite;
+  display: inline-block;
+  animation: gradientShift 10s ease-in-out infinite;
+}
+
+.hero__name-char {
+  display: inline-block;
 }
 
 @keyframes gradientShift {
