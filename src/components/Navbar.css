@@ -114,13 +114,16 @@
 }
 
 @media (max-width: 900px) {
+
   .navbar__links,
   .navbar__cta {
     display: none;
   }
+
   .navbar__menu-btn {
     display: flex;
   }
+
   .navbar__mobile {
     display: flex;
   }

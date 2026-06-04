@@ -15,10 +15,6 @@ export default function Experience() {
       <div className="experience__timeline">
         {experience.map((job, i) => (
           <SectionReveal key={job.company + job.role} className="experience__item">
-            <div className="experience__marker">
-              <span />
-              {i < experience.length - 1 && <div className="experience__line" />}
-            </div>
             <article className="experience__card card">
               <div className="experience__header">
                 <div>

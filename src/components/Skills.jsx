@@ -15,7 +15,6 @@ export default function Skills() {
       <div className="skills__grid">
         {skillGroups.map((group, i) => (
           <SectionReveal key={group.title} className="skills__card card">
-            <span className="skills__index">0{i + 1}</span>
             <h3>{group.title}</h3>
             <div className="skills__tags">
               {group.skills.map((skill) => (

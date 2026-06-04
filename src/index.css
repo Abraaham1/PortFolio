@@ -69,13 +69,16 @@ img {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg);
 }
+
 ::-webkit-scrollbar-thumb {
   background: #2a2a35;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #3a3a48;
 }
@@ -199,6 +202,7 @@ img {
   .section {
     padding: 72px 20px;
   }
+
   .section-title {
     margin-bottom: 32px;
   }

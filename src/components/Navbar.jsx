@@ -30,7 +30,6 @@ export default function Navbar() {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          <span className="navbar__logo-accent">{personal.name[0]}</span>
           {personal.name}
         </a>
 
