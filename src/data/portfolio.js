@@ -12,7 +12,7 @@ export const personal = {
   github: "https://github.com/Abraaham1",
   githubUsername: "Abraaham1",
   avatar: "https://avatars.githubusercontent.com/u/203318462?v=4",
-  cgpa: "3.62",
+  cgpa: "3.69",
   cvUrl: "/Abdulrahman_Iqbal_CV.pdf",
   cvFileName: "Abdulrahman_Iqbal_CV.pdf",
 };
