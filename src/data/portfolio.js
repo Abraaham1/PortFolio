@@ -24,7 +24,7 @@ export const education = [
     degree: "Bachelor of Computer Science",
     school: "University of the Punjab",
     period: "Present",
-    detail: "CGPA: 3.62",
+    detail: "CGPA: 3.69",
     highlight: true,
   },
   {
