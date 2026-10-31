@@ -113,7 +113,7 @@
   justify-content: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
 
   .navbar__links,
   .navbar__cta {

@@ -19,58 +19,12 @@ export default function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero__content">
-        <motion.div
-          className="hero__badge"
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={0}
-        >
-          <svg
-            className="hero__badge-outline"
-            aria-hidden="true"
-          >
-            <defs>
-              <linearGradient
-                id="heroBadgeStroke"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%"
-              >
-                <stop offset="0%" stopColor="#22d3ee" />
-                <stop offset="100%" stopColor="#a78bfa" />
-              </linearGradient>
-            </defs>
-            <rect
-              className="hero__badge-outline-track"
-              x="1"
-              y="1"
-              width="100%"
-              height="100%"
-              rx="17"
-              ry="17"
-            />
-            <rect
-              className="hero__badge-outline-path"
-              x="1"
-              y="1"
-              width="100%"
-              height="100%"
-              rx="17"
-              ry="17"
-              pathLength="100"
-            />
-          </svg>
-          <span className="hero__badge-label">Available for opportunities</span>
-        </motion.div>
-
         <motion.h1
           className="hero__title"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={1}
+          custom={0}
         >
           Hi, I&apos;m <span className="hero__name">{firstName}</span>
           <br />
@@ -82,7 +36,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={2}
+          custom={1}
         >
           {personal.roles.map((role, i) => (
             <span key={role}>
@@ -97,7 +51,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={3}
+          custom={2}
         >
           {personal.tagline}
         </motion.p>
@@ -107,7 +61,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={4}
+          custom={3}
         >
           <span>
             <MapPin size={16} />
@@ -121,7 +75,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={5}
+          custom={4}
         >
           <a href="#projects" className="btn btn-primary">
             View Projects
@@ -144,7 +98,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={6}
+          custom={5}
         >
           <a
             href={personal.github}

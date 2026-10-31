@@ -2,20 +2,19 @@
 export const siteUrl = "https://abd-tech.vercel.app";
 
 export const seo = {
-  title: "Abdulrahman Iqbal | Python Developer & Backend Engineer",
+  title: "Abdulrahman Iqbal | ML Researcher & Backend Engineer",
   description:
-    "Abdulrahman Iqbal — Python Developer, Backend Engineer & Automation Specialist in Lahore, Pakistan. Portfolio showcasing ERP automation, Django, Flask, n8n, and AI/ML projects. CS student at University of the Punjab.",
+    "Abdulrahman Iqbal — Machine Learning Researcher, Backend Engineer, and Python Developer in Lahore, Pakistan. Portfolio covering reinforcement learning, zkML research, robotics, and production backend systems. CS student at University of the Punjab.",
   keywords: [
     "Abdulrahman Iqbal",
     "Abdulrahman Iqbal portfolio",
-    "Abdulrahman Iqbal developer",
+    "machine learning researcher",
     "Python developer Lahore",
     "backend engineer Pakistan",
-    "automation specialist",
-    "ERP automation",
-    "Django developer",
-    "Flask developer",
-    "n8n automation",
+    "reinforcement learning",
+    "zkML",
+    "PyTorch",
+    "FastAPI",
   ].join(", "),
   author: "Abdulrahman Iqbal",
   locale: "en_US",
@@ -32,7 +31,7 @@ export function personJsonLd(personal) {
     url: siteUrl,
     image: personal.avatar,
     email: `mailto:${personal.email}`,
-    jobTitle: personal.title,
+    jobTitle: "Machine Learning Researcher",
     description: seo.description,
     address: {
       "@type": "PostalAddress",
@@ -41,13 +40,14 @@ export function personJsonLd(personal) {
     },
     sameAs: [personal.github, personal.linkedin],
     knowsAbout: [
+      "Machine Learning",
+      "Reinforcement Learning",
+      "PyTorch",
       "Python",
       "Backend Development",
-      "Automation",
-      "ERP Integration",
-      "Django",
-      "Flask",
-      "Machine Learning",
+      "FastAPI",
+      "Robotics",
+      "Zero-Knowledge Proofs",
     ],
     alumniOf: {
       "@type": "CollegeOrUniversity",

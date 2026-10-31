@@ -19,9 +19,9 @@ export default function Contact() {
           <div className="contact__intro">
             <h3>Have a project in mind?</h3>
             <p>
-              I&apos;m open to internships, freelance work, and collaboration on
-              automation, backend, and AI projects. Reach out - I typically respond
-              within 24 hours.
+              Open to research collaborations, internships, and backend or
+              machine learning work. Reach out — I typically respond within 24
+              hours.
             </p>
           </div>
 
